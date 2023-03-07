@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morning Checklist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/output.css" />
+    <script
+      src="https://kit.fontawesome.com/725a23138f.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body
+    class="flex h-screen flex-col items-center justify-center bg-slate-800 text-slate-50"
+  >
+    <header
+      class="absolute top-0 flex w-full justify-center bg-slate-900 py-4 drop-shadow-md"
+    >
+      <h1 class="text-4xl tracking-wider">Morning Todo List</h1>
+    </header>
+    <main
+      class="transistion mx-auto hidden h-full w-[90%] pt-5 text-3xl duration-1000 ease-in"
+    >
+      <ul class="flex h-full flex-col items-center justify-between">
+        <!-- <li
+          class="peePad flex w-full items-center border-b-[1px] border-slate-50 pb-6"
+        >
+          <label for="peePad" class="mr-auto inline-block">Change Pee Pad</label
+          ><input
+            type="checkbox"
+            class="checkbox"
+            name="peePad"
+            value="peePad"
+            id="peePad"
+          />
+          <i
+            class="fa-solid fa-check hidden text-green-500 opacity-0 transition duration-300 ease-in-out"
+          ></i>
+        </li> -->
+      </ul>
+    </main>
+    <div>
+      <p>
+        Reset: <span id="hours">xx</span>:<span id="mins">xx</span>:<span
+          id="secs"
+          >xx</span
+        >
+      </p>
+    </div>
+
+    <div
+      id="myModal"
+      class="modal fixed left-0 top-0 z-10 h-screen w-screen overflow-auto bg-[rgb(0,0,0,0.4)] transition duration-500 ease-in-out"
+    >
+      <div class="grid h-screen w-screen place-items-center">
+        <form
+          action="#"
+          class="flex w-[80%] flex-col items-center justify-center rounded-2xl bg-slate-400 py-8"
+        >
+          <input
+            type="password"
+            id="passwordInput"
+            class="h-10 rounded-lg indent-2 text-2xl text-slate-800 drop-shadow-2xl"
+            placeholder="Password"
+          />
+          <span
+            class="transisition mt-2 text-red-500 opacity-0 duration-300 ease-in"
+            id="passwordErrMsg"
+            >**Incorrect Password!**</span
+          >
+          <button
+            class="mt-10 rounded-md bg-slate-800 px-6 py-3 drop-shadow-2xl"
+          >
+            Verify
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div
+      id="completeModal"
+      class="modal fixed left-0 top-0 z-10 hidden h-screen w-screen overflow-auto bg-[rgb(0,0,0,0.4)] opacity-0 transition duration-300 ease-in-out"
+    >
+      <div class="grid h-screen w-screen place-items-center">
+        <h2 class="text-lg">ALL TASKS COMPLETE</h2>
+        <button
+          class="rounded-md bg-slate-50 py-3 px-6 text-slate-800"
+          id="resetBtn"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
